@@ -21,3 +21,4 @@ Menunggu pembayaran, Transfer terverifikasi, Sedang diproduksi, Siap diambil, Se
 
 ## Notes
 Final initial prices: children Rp67.000 short / Rp77.000 long; S–XL Rp97.000 short / Rp107.000 long; XXL–4XL Rp107.000 short / Rp117.000 long. Initial transfer account is BRI 654601043399535 under Ahmad Hassan Tsabit. Admin can change every price, account, and product image from the dashboard.
+All uploaded and catalog product photos preserve their original color on the storefront, cart, and admin dashboard; no grayscale filter is applied.

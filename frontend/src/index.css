@@ -128,6 +128,9 @@
   html {
     @apply font-sans;
     }
+  img {
+    filter: none !important;
+  }
 }
 
 @keyframes rise-in {
