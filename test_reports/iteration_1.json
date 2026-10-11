@@ -1,0 +1,111 @@
+{
+  "iteration": 1,
+  "passed": 14,
+  "failed": 0,
+  "flaky": 0,
+  "blocked": 0,
+  "test_error": 0,
+  "retest_needed": false,
+  "bugs": [],
+  "action_items": [],
+  "checks": [
+    {
+      "criterion": "Admin area is protected by a six-digit PIN and supports logout",
+      "name": "test_tscheck_admin_auth.py",
+      "lane": "backend",
+      "status": "passed",
+      "evidence": "POST /api/admin/login wrong PIN -> 401; GET /api/admin/orders unauth -> 401/403; correct PIN -> 200 authenticated:true; GET /api/admin/orders -> 200; logout -> 200 authenticated:false; orders blocked again -> 401/403. 3 tests passed in 0.99s."
+    },
+    {
+      "criterion": "Admin area is protected by a six-digit PIN and supports logout",
+      "name": "admin-pin-login-logout",
+      "lane": "browser",
+      "status": "passed",
+      "evidence": "Unauthenticated /admin shows admin-login-page; PIN 492345 submit reveals admin-page/admin-page-title; admin-logout-button click returns to admin-login-page. Screenshots captured."
+    },
+    {
+      "criterion": "Admin can manage final per-variant prices, transfer accounts, and four built-in shirt images",
+      "name": "test_tscheck_admin_pricing_accounts.py",
+      "lane": "backend",
+      "status": "passed",
+      "evidence": "PATCH /api/admin/pricing updates S_pendek price and GET /api/catalog reflects it; PUT /api/admin/accounts saves tscheck-bri-test account and GET /api/catalog transfer method lists it; both restored to original values in teardown. 1 test passed."
+    },
+    {
+      "criterion": "Admin can manage final per-variant prices, transfer accounts, and four built-in shirt images",
+      "name": "admin-manage-pricing-accounts-images",
+      "lane": "browser",
+      "status": "passed",
+      "evidence": "admin-price-input-S_pendek editable and save shows success toast (value restored after); admin-add-account-button adds a row then removed before saving (no seed mutation); all 4 admin-image-upload-input-{hitam_pendek,hitam_panjang,putih_pendek,putih_panjang} present."
+    },
+    {
+      "criterion": "Admin receives in-dashboard awareness of new orders",
+      "name": "admin-new-order-notification",
+      "lane": "browser",
+      "status": "passed",
+      "evidence": "admin-auto-refresh-status visible on load; order created via API while dashboard open (15s poll); new-orders-notification became visible within 25s without any third-party messaging."
+    },
+    {
+      "criterion": "Admin can add flexible merchandise products",
+      "name": "test_tscheck_admin_products_crud.py::test_create_product_appears_in_public_catalog",
+      "lane": "backend",
+      "status": "passed",
+      "evidence": "POST /api/admin/products (multipart, name+description+active+variants_json+file) -> 200, active:true, editable:true; GET /api/products includes new product id."
+    },
+    {
+      "criterion": "Admin can add flexible merchandise products",
+      "name": "admin-produk-create-product",
+      "lane": "browser",
+      "status": "passed",
+      "evidence": "/admin/produk form filled (name, description, required photo, active checkbox, 1 variant row) and saved; product name visible in products-list and on public home page."
+    },
+    {
+      "criterion": "Admin can edit, activate/deactivate, replace image, and delete added products",
+      "name": "test_tscheck_admin_products_crud.py::test_edit_deactivate_hides_from_public_then_delete_removes + test_builtin_product_cannot_be_deleted",
+      "lane": "backend",
+      "status": "passed",
+      "evidence": "PUT /api/admin/products/{id} sets active:false -> GET /api/products no longer includes it while GET /api/admin/products still does; DELETE /api/admin/products/{id} -> 204 and removed from admin list; DELETE /api/admin/products/kaos-bani-zainuddin -> 422, product remains in /api/products. 2 tests passed."
+    },
+    {
+      "criterion": "Admin can edit, activate/deactivate, replace image, and delete added products",
+      "name": "admin-produk-edit-delete",
+      "lane": "browser",
+      "status": "passed",
+      "evidence": "Created product edited to inactive -> Draft badge shown, hidden from public home; deleted via confirm dialog -> removed from products-list; built-in admin-product-kaos-bani-zainuddin card has no delete-product control."
+    },
+    {
+      "criterion": "Customers can browse active product cards and build a mixed-product cart",
+      "name": "storefront-browse-mixed-cart",
+      "lane": "browser",
+      "status": "passed",
+      "evidence": "product-catalog-section shows >=2 catalog-product-* cards; added built-in shirt then a different product card's variant to cart; cart-panel shows 2 distinct cart-item rows."
+    },
+    {
+      "criterion": "Customer can complete checkout for an added product and later find the order by phone",
+      "name": "test_tscheck_checkout_lookup.py",
+      "lane": "backend",
+      "status": "passed",
+      "evidence": "POST /api/orders (COD, added product variant, qty 2) -> 200 with order_number and total_amount = price*2; GET /api/orders/lookup?phone=... -> 200 includes the created order with matching product_name."
+    },
+    {
+      "criterion": "Customer can complete checkout for an added product and later find the order by phone",
+      "name": "checkout-and-lookup-by-phone",
+      "lane": "browser",
+      "status": "passed",
+      "evidence": "Ran against public preview URL. Added product to cart, completed checkout (name/phone/address/COD) -> order-success-modal with success-order-number; /pesanan lookup by same phone shows lookup-results containing that order number."
+    },
+    {
+      "criterion": "Final shirt pricing and official BRI account are the initial public values",
+      "name": "test_tscheck_admin_auth.py (shared) / catalog values verified inline during pricing test baseline fetch",
+      "lane": "backend",
+      "status": "passed",
+      "evidence": "GET /api/catalog at suite start (pre-mutation) confirmed: anak_pendek=67000, anak_panjang=77000, S..XL_pendek=97000/_panjang=107000, XXL..4XL_pendek=107000/_panjang=117000, transfer account BRI 654601043399535 / Ahmad Hassan Tsabit. Values restored after the pricing/accounts test."
+    },
+    {
+      "criterion": "Final shirt pricing and official BRI account are the initial public values",
+      "name": "catalog-initial-pricing-and-account",
+      "lane": "browser",
+      "status": "passed",
+      "evidence": "live-price verified for anak (67k/77k), S (97k/107k), XL short (97k), XXL-4XL (107k/117k); completed a transfer checkout and transfer-instructions block shows BRI / 654601043399535 / Ahmad Hassan Tsabit."
+    }
+  ]
+}

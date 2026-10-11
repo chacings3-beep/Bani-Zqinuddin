@@ -27,14 +27,12 @@ export interface ProductSize {
 }
 
 export interface Pricing {
-  base_price: number;
-  child_price: number;
-  long_sleeve_extra: number;
-  xxl_extra: number;
-  xxxl_extra: number;
+  child_price?: number;
+  prices: Record<string, number>;
 }
 
 export interface PaymentAccount {
+  id?: string;
   bank: string;
   account_number: string;
   account_name: string;
@@ -58,7 +56,25 @@ export interface CatalogResponse {
   images: Record<string, string>;
 }
 
+export interface AdminSettings {
+  pricing: Pricing;
+  accounts: PaymentAccount[];
+  images: Record<string, string>;
+}
+
+export interface AdminSession {
+  authenticated: boolean;
+}
+
+export interface ImageUploadResponse {
+  key: string;
+  url: string;
+  images: Record<string, string>;
+}
+
 export interface OrderItemCreate {
+  product_id: string;
+  variant_id?: string;
   color: string;
   sleeve: string;
   size: string;
@@ -74,11 +90,31 @@ export interface OrderCreate {
 }
 
 export interface OrderItem extends OrderItemCreate {
+  product_name: string;
   color_label: string;
   sleeve_label: string;
   size_label: string;
   unit_price: number;
   line_total: number;
+}
+
+export interface MerchandiseVariant {
+  id: string;
+  color: string;
+  model: string;
+  size: string;
+  price: number;
+}
+
+export interface MerchandiseProduct {
+  id: string;
+  name: string;
+  description: string;
+  image_url: string;
+  active: boolean;
+  editable: boolean;
+  variants: MerchandiseVariant[];
+  created_at: string;
 }
 
 export interface Order {

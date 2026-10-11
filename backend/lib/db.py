@@ -24,6 +24,10 @@ INDEXES: dict[str, list[IndexModel]] = {
         IndexModel([("phone_normalized", ASCENDING), ("created_at", DESCENDING)], name="phone_created"),
     ],
     "settings": [IndexModel([("key", ASCENDING)], name="settings_key", unique=True)],
+    "products": [
+        IndexModel([("id", ASCENDING)], name="product_id", unique=True),
+        IndexModel([("active", ASCENDING), ("created_at", DESCENDING)], name="active_created"),
+    ],
 }
 
 

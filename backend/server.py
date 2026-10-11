@@ -12,7 +12,7 @@ ROOT_DIR = Path(__file__).parent
 load_dotenv(ROOT_DIR / ".env")
 
 from lib.db import client, db, ensure_indexes
-from routers import admin, catalog, orders
+from routers import admin, catalog, orders, products
 
 
 @asynccontextmanager
@@ -34,6 +34,7 @@ async def root():
 api_router.include_router(catalog.router)
 api_router.include_router(orders.router)
 api_router.include_router(admin.router)
+api_router.include_router(products.router)
 
 app.add_middleware(
     CORSMiddleware,

@@ -15,6 +15,8 @@ OrderStatus = Literal[
 
 
 class OrderItemCreate(BaseModel):
+    product_id: str = "kaos-bani-zainuddin"
+    variant_id: str | None = None
     color: str
     sleeve: str
     size: str
@@ -30,6 +32,9 @@ class OrderCreate(BaseModel):
 
 
 class OrderItem(BaseModel):
+    product_id: str = "kaos-bani-zainuddin"
+    product_name: str = "Kaos Bani Zainuddin"
+    variant_id: str | None = None
     color: str
     color_label: str
     sleeve: str
