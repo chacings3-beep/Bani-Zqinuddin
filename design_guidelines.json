@@ -1,0 +1,128 @@
+{
+  "project_title": "Pesan Kaos Bani Zainuddin",
+  "archetype": "Swiss & High-Contrast Minimalist (Monochrome Studio Aesthetic)",
+  "language": "Indonesian (Bahasa Indonesia)",
+  "emotional_tone": "Clean, prestigious family/organization apparel pre-order platform with tactile high-contrast layout, bold display headers, seamless customer flow, and clear order management.",
+  "theme_strategy": {
+    "default_mode": "light",
+    "background_base": "#FFFFFF",
+    "surface_bone": "#F8F9FA",
+    "surface_subtle": "#F1F3F5",
+    "text_primary": "#0A0A0A",
+    "text_muted": "#52525B",
+    "border_stroke": "#E4E4E7",
+    "accent_black": "#09090B",
+    "accent_hover": "#27272A",
+    "highlight_emerald": "#059669",
+    "highlight_amber": "#D97706"
+  },
+  "typography": {
+    "heading_font": "Space Grotesk / Outfit / Plus Jakarta Sans (Bold, tracking-tight)",
+    "body_font": "Plus Jakarta Sans / DM Sans / Geist",
+    "scale": {
+      "h1_hero": "text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight",
+      "h2_section": "text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight",
+      "h3_card": "text-xl sm:text-2xl font-semibold tracking-tight",
+      "subtitle": "text-base sm:text-lg text-zinc-600 font-normal leading-relaxed",
+      "body": "text-sm sm:text-base leading-relaxed text-zinc-800",
+      "label": "text-xs font-semibold uppercase tracking-wider text-zinc-500"
+    }
+  },
+  "product_variants": {
+    "colors": [
+      { "id": "hitam", "label": "Hitam Elegant", "hex": "#09090B" },
+      { "id": "putih", "label": "Putih Bersih", "hex": "#FFFFFF" }
+    ],
+    "sleeves": [
+      { "id": "pendek", "label": "Lengan Pendek" },
+      { "id": "panjang", "label": "Lengan Panjang (+ Rp 10.000)" }
+    ],
+    "sizes": [
+      { "id": "anak", "label": "Anak-anak", "category": "Anak" },
+      { "id": "S", "label": "S", "category": "Dewasa" },
+      { "id": "M", "label": "M", "category": "Dewasa" },
+      { "id": "L", "label": "L", "category": "Dewasa" },
+      { "id": "XL", "label": "XL", "category": "Dewasa" },
+      { "id": "XXL", "label": "XXL (+ Rp 5.000)", "category": "Jumbo" },
+      { "id": "XXXL", "label": "XXXL (+ Rp 10.000)", "category": "Jumbo" }
+    ],
+    "default_pricing": {
+      "base_price": 85000,
+      "child_price": 70000,
+      "long_sleeve_extra": 10000,
+      "xxl_extra": 5000,
+      "xxxl_extra": 10000
+    }
+  },
+  "payment_modes": [
+    {
+      "id": "transfer",
+      "title": "Transfer Bank (Manual)",
+      "badge": "Direkomendasikan",
+      "accounts": [
+        { "bank": "BCA", "account_number": "8720192834", "account_name": "Panitia Bani Zainuddin" },
+        { "bank": "Mandiri", "account_number": "1370009823124", "account_name": "Panitia Bani Zainuddin" }
+      ]
+    },
+    {
+      "id": "cod",
+      "title": "Cash on Delivery (Bayar Saat Diambil / Diterima)",
+      "badge": "Bayar di Tempat",
+      "description": "Pembayaran secara tunai saat pengambilan baju atau diserahkan langsung kepada panitia."
+    }
+  ],
+  "image_urls": {
+    "hero_banner": "https://images.unsplash.com/photo-1693443687750-611ad77f3aba?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NjZ8MHwxfHNlYXJjaHw0fHxibGFjayUyMHdoaXRlJTIwdC1zaGlydCUyMGFwcGFyZWwlMjBtb2NrdXAlMjBwcm9kdWN0fGVufDB8fHx8MTc5MTc1NTQ2MHww&ixlib=rb-4.1.0&q=85",
+    "black_short_sleeve": "https://images.unsplash.com/photo-1610502778270-c5c6f4c7d575?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NjZ8MHwxfHNlYXJjaHwyfHxibGFjayUyMHdoaXRlJTIwdC1zaGlydCUyMGFwcGFyZWwlMjBtb2NrdXAlMjBwcm9kdWN0fGVufDB8fHx8MTc5MTc1NTQ2MHww&ixlib=rb-4.1.0&q=85",
+    "black_long_sleeve": "https://images.unsplash.com/photo-1618354691551-44de113f0164?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NjZ8MHwxfHNlYXJjaHwyfHxsb25nJTIwc2xlZXZlJTIwdC1zaGlydCUyMGJsYWNrJTIwd2hpdGUlMjBtb2NrdXB8ZW58MHx8fHwxNzkxNzU1NDY2fDA&ixlib=rb-4.1.0&q=85",
+    "white_short_sleeve": "https://images.unsplash.com/photo-1651761179569-4ba2aa054997?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NjZ8MHwxfHNlYXJjaHwxfHxibGFjayUyMHdoaXRlJTIwdC1zaGlydCUyMGFwcGFyZWwlMjBtb2NrdXAlMjBwcm9kdWN0fGVufDB8fHx8MTc5MTc1NTQ2MHww&ixlib=rb-4.1.0&q=85",
+    "white_long_sleeve": "https://images.unsplash.com/photo-1671438118257-cefa6c86fd50?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NjZ8MHwxfHNlYXJjaHw0fHxsb25nJTIwc2xlZXZlJTIwdC1zaGlydCUyMGJsYWNrJTIwd2hpdGUlMjBtb2NrdXB8ZW58MHx8fHwxNzkxNzU1NDY2fDA&ixlib=rb-4.1.0&q=85",
+    "apparel_grid_pair": "https://images.unsplash.com/photo-1562135291-7728cc647783?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NjZ8MHwxfHNlYXJjaHwzfHxibGFjayUyMHdoaXRlJTIwdC1zaGlydCUyMGFwcGFyZWwlMjBtb2NrdXAlMjBwcm9kdWN0fGVufDB8fHx8MTc5MTc1NTQ2MHww&ixlib=rb-4.1.0&q=85"
+  },
+  "key_features_to_build": [
+    "Header Navigation with Brand Title 'Pesan Kaos Bani Zainuddin', Cart Badge Counter, Track Order Link, and Admin Toggle",
+    "Hero Section showcasing high-contrast product imagery, pre-order dates countdown, and primary CTA 'Pesan Sekarang'",
+    "Interactive Product Catalog with Color Switcher (Hitam & Putih), Sleeve Switcher (Pendek & Panjang), Size Selection Pills (Anak, S-XXXL), Live Price Calculator, and 'Tambah ke Keranjang'",
+    "Shopping Cart Drawer / Modal with Quantity Modifiers, Variant Breakdown, and Subtotal",
+    "Seamless Checkout Form (Nama Lengkap, Nomor HP/WhatsApp, Alamat Lengkap) - No Login Required",
+    "Payment Method Selection (Transfer Bank with Copyable Account Numbers & Transfer Instructions vs COD)",
+    "Order Success Modal / Confirmation Page with Printable Invoice summary and Copyable Order ID",
+    "Public Order Lookup ('Cek Pesanan Saya') by Phone Number summarizing all past and current pre-orders",
+    "Admin Dashboard ('Dashboard Admin') allowing status updates (Pending, Transfer Verified, In Production, Ready for Pickup, Completed, Cancelled), Pricing Tier Editor, and Order Export/Filter"
+  ],
+  "testing_attributes_guidelines": {
+    "rule": "Every button, input, link, badge, modal, tab, and status indicator MUST have a clear data-testid attribute in kebab-case.",
+    "examples": [
+      "data-testid='nav-home-link'",
+      "data-testid='nav-cart-button'",
+      "data-testid='nav-lookup-button'",
+      "data-testid='nav-admin-button'",
+      "data-testid='color-select-hitam'",
+      "data-testid='color-select-putih'",
+      "data-testid='sleeve-select-pendek'",
+      "data-testid='sleeve-select-panjang'",
+      "data-testid='size-select-M'",
+      "data-testid='add-to-cart-button'",
+      "data-testid='checkout-name-input'",
+      "data-testid='checkout-phone-input'",
+      "data-testid='checkout-address-input'",
+      "data-testid='payment-method-transfer'",
+      "data-testid='payment-method-cod'",
+      "data-testid='submit-order-button'",
+      "data-testid='phone-lookup-input'",
+      "data-testid='phone-lookup-submit'",
+      "data-testid='admin-status-select-{orderId}'",
+      "data-testid='admin-pricing-save-button'"
+    ]
+  },
+  "UNIVERSAL GUIDELINES FOR MAIN AGENT": [
+    "Do NOT use dark colors as standard gradients. Keep surfaces crisp with pure white background, subtle dark borders, and rich black accents.",
+    "Ensure all copy is in proper, natural Indonesian (Bahasa Indonesia).",
+    "Never center-align the main App container globally.",
+    "Do NOT use generic emoji characters like 🤖🧠💭💡 for UI icons. Use Lucide icons (e.g., ShoppingBag, CheckCircle, Copy, Search, Truck, CreditCard, ShieldCheck).",
+    "Ensure all interactive elements have responsive micro-interactions (hover, focus-ring, tap scale, loading state).",
+    "Ensure input fields carry proper validation and clean accessibility labels.",
+    "Ensure header never uses fully transparent background over scrollable content. Use backdrop-blur-md bg-white/90 border-b border-zinc-200.",
+    "Ensure Toast notifications use sonner for all actions (e.g. 'Pesanan Berhasil Dibuat', 'Nomor Rekening Disalin', 'Keranjang Diperbarui')."
+  ]
+}
