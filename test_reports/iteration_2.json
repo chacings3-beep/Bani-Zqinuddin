@@ -1,0 +1,28 @@
+{
+  "iteration": 2,
+  "passed": 2,
+  "failed": 0,
+  "flaky": 0,
+  "blocked": 0,
+  "test_error": 0,
+  "retest_needed": false,
+  "bugs": [],
+  "action_items": [],
+  "checks": [
+    {
+      "criterion": "Public storefront contains only the official built-in shirt when no admin-created product is active",
+      "name": "storefront-only-official-shirt",
+      "lane": "browser",
+      "status": "passed",
+      "evidence": "GET /api/products (curl) returns exactly 1 product: 'Kaos Bani Zainuddin'. Home page shows 'Kaos Bani Zainuddin', product-catalog-section has 0 count, no text matching /Merchandise Uji/i or /tscheck/i rendered anywhere."
+    },
+    {
+      "criterion": "New products are controlled only from the admin product dashboard and default to draft",
+      "name": "admin-produk-default-draft",
+      "lane": "browser",
+      "status": "passed",
+      "evidence": "After PIN 492345 login, /admin/produk shows product-editor with product-active-checkbox unchecked by default, and label text 'Tampilkan produk di katalog pelanggan' visible next to it."
+    }
+  ],
+  "notes": "Ran existing backend pytest suite (8 passed) as a sanity re-check of unaffected criteria; no new backend tests needed for this read-only cleanliness verification since both matrix criteria are UI-surfaced. Confirmed via direct curl that products collection currently holds exactly the built-in shirt (no residual tscheck/Merchandise Uji products or orders)."
+}
